@@ -40,7 +40,7 @@
 // overflow `usize` and index out of bounds. Refuse to compile there rather
 // than ship a silently-unsafe build — supporting 32-bit/wasm would require a
 // dedicated checked-arithmetic pass first.
-#[cfg(not(target_pointer_width = "64"))]
+#[cfg(all(not(target_pointer_width = "64"), not(target_arch = "wasm32")))]
 compile_error!("turbovec requires a 64-bit target (target_pointer_width = \"64\")");
 
 pub mod codebook;
