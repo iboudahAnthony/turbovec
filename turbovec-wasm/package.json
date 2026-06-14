@@ -1,0 +1,9 @@
+{
+  "name": "turbovec-wasm",
+  "version": "0.1.0",
+  "description": "WASM bindings for turbovec (TurboQuant vector index)",
+  "module": "./pkg/turbovec_wasm.js",
+  "files": ["pkg/"],
+  "keywords": ["turbovec","wasm","vector-search"],
+  "license": "MIT"
+}
